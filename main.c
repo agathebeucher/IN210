@@ -7,6 +7,7 @@
 #include "cmocka.h"
 #include <string.h>
 #include "ratp.h"
+#include <stdbool.h>
 
 /* A test case that does nothing and succeeds. */
 
@@ -23,11 +24,25 @@ static int teardown(void **state) {
 static void null_test_success(void **state) {
     (void) state;
 }
+static void test_tourist_float(void **state){
+    (void) state;
+    float prix=computePrice(20.0,0);
+    assert_float_equal(1.5,prix,0.001);
+}
+
+static void test_tourist_int(void **state){
+    (void) state;
+    float prix=computePrice(20.0,0);
+    assert_true(2.0==prix);
+}
 
 int main(void) {
     const struct CMUnitTest tests[] = {
         cmocka_unit_test(null_test_success),
+        cmocka_unit_test(test_tourist_float),
+        cmocka_unit_test(test_tourist_int),
     };
  //   cmocka_set_message_output(CM_OUTPUT_XML);
     return cmocka_run_group_tests_name("toto",tests, setup, teardown);
+    //prend le tableau qui s'apelle tests défini précédemment
 }
