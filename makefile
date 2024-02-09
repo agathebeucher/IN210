@@ -10,7 +10,7 @@ SRC = ratp.c  main.c cmocka.o
 
 
 all: $(OBJS)
-	$(CXX)  $(INCS) -o testAll  $(OBJS)
+	$(CXX) $(LDFLAGS) $(INCS) -o testAll  $(OBJS)
 
 	
 exec : all
