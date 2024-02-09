@@ -31,14 +31,15 @@ static void null_test_success(void **state) {
 }
 static void test_tourist_float(void **state){
     (void) state;
+    will_return(recupAge,12);
     float prix=computePrice(20.0,0);
     // Utilisation du mock
-    will_return(recupAge,12);
     assert_float_equal(1.5,prix,0.001);
 }
 
 static void test_tourist_int(void **state){
     (void) state;
+    will_return(recupAge,12);
     float prix=computePrice(20.0,0);
     assert_true(2.0==prix);
 }
