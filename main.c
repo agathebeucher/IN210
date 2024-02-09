@@ -42,7 +42,7 @@ int main(void) {
         cmocka_unit_test(test_tourist_float),
         cmocka_unit_test(test_tourist_int),
     };
- //   cmocka_set_message_output(CM_OUTPUT_XML);
+    cmocka_set_message_output(CM_OUTPUT_XML);
     return cmocka_run_group_tests_name("toto",tests, setup, teardown);
     //prend le tableau qui s'apelle tests défini précédemment
 }
