@@ -24,3 +24,6 @@ clean:
 
 mrproper: clean
 	rm testAll
+	rm cmocka.gcda
+	rm main.gcda
+	rm ratp.gcda
