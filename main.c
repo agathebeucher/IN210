@@ -36,13 +36,20 @@ static void test_tourist_int(void **state){
     assert_true(2.0==prix);
 }
 
+static void test_age(void **state){
+    (void) state;
+    int age=12;
+    float prix=computerPrix(age,0);
+    assert_float_equal(1.5,prix,0.001);
+}
+
 int main(void) {
     const struct CMUnitTest tests[] = {
         cmocka_unit_test(null_test_success),
         cmocka_unit_test(test_tourist_float),
         cmocka_unit_test(test_tourist_int),
     };
-    cmocka_set_message_output(CM_OUTPUT_XML);
+//    cmocka_set_message_output(CM_OUTPUT_XML);
     return cmocka_run_group_tests_name("toto",tests, setup, teardown);
     //prend le tableau qui s'apelle tests défini précédemment
 }
