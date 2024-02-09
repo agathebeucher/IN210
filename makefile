@@ -4,7 +4,7 @@ OPTIONS = -Wall -fexceptions -fprofile-arcs -ftest-coverage
 INCS = -I.  -I"." 
 OBJS = $(SRC:.c=.o)
 
-SRC = ratp.c  main.c cmocka.o
+SRC = ratp.c  main.c cmocka.c
 
 
 
@@ -16,7 +16,7 @@ all: $(OBJS)
 exec : all
 	testAll.exe
 %.o: %.c
-	$(CXX)  -c  $< -o $@ $(INCS)
+	$(CXX) $(OPTIONS) -c  $< -o $@ $(INCS)
 	
 clean:
 	rm $(OBJS) 
