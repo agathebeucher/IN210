@@ -1,9 +1,12 @@
 CXX = gcc
-
+LDFLAGS = --coverage
+OPTIONS = -Wall -fexceptions -fprofile-arcs -ftest-coverage
 INCS = -I.  -I"." 
 OBJS = $(SRC:.c=.o)
 
 SRC = ratp.c  main.c cmocka.o
+
+
 
 
 all: $(OBJS)
