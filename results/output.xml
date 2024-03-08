@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.10.12 on linux)" generated="2024-03-08T12:08:37.946133" rpa="false" schemaversion="5">
+<suite id="s1" name="IN210" source="/home/mathias/Documents/2a_ensta/IN210">
+<suite id="s1-s1" name="Tp6" source="/home/mathias/Documents/2a_ensta/IN210/tp6">
+<suite id="s1-s1-s1" name="Tp2024" source="/home/mathias/Documents/2a_ensta/IN210/tp6/tp2024.robot">
+<test id="s1-s1-s1-t1" name="test 2" line="24">
+<kw name="Rechercher et verifier">
+<kw name="Rechercher">
+<kw name="Ouvrir Prestashop">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-08T12:08:38.093122" level="INFO">Opening browser 'Chrome' to base url 'http://www.qualifiez.fr/monPrestashop2/prestashop/index.php'.</msg>
+<arg>http://www.qualifiez.fr/monPrestashop2/prestashop/index.php</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-08T12:08:38.092127" elapsed="4.188736"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-08T12:08:42.288177" level="INFO">Page title is 'monPrestashop'.</msg>
+<arg>monPrestashop</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-03-08T12:08:42.281474" elapsed="0.007168"/>
+</kw>
+<status status="PASS" start="2024-03-08T12:08:38.091159" elapsed="4.197664"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-08T12:08:42.288968" elapsed="0.114779"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-08T12:08:42.404664" level="INFO">Typing text 'mug' into text field 'xpath=//*[@id="search_widget"]/form/input[2]'.</msg>
+<arg>xpath=//*[@id="search_widget"]/form/input[2]</arg>
+<arg>${item}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-08T12:08:42.404079" elapsed="0.190425"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-08T12:08:42.596139" level="INFO">Sending key(s) ('RETURN',) to xpath=//*[@id="search_widget"]/form/input[2] element.</msg>
+<msg time="2024-03-08T12:08:42.887862" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2024-03-08T12:08:42.888227" level="INFO">Releasing special key RETURN.</msg>
+<arg>xpath=//*[@id="search_widget"]/form/input[2]</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-08T12:08:42.595086" elapsed="2.168902"/>
+</kw>
+<arg>${item}</arg>
+<status status="PASS" start="2024-03-08T12:08:38.090622" elapsed="6.673587"/>
+</kw>
+<kw name="Verifier">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-08T12:08:44.765130" level="INFO">Verifying element 'xpath=//*[@id="js-product-list-top"]/div[1]/p' contains exact text 'Il y a 5 produits.'.</msg>
+<arg>xpath=//*[@id="js-product-list-top"]/div[1]/p</arg>
+<arg>${message}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-03-08T12:08:44.764857" elapsed="0.029429"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-08T12:08:44.804436" level="INFO">@{listeMUG} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="94a7875808b9095705186c94aec8662c", element="f.9404537B0B1D9576F05B0AEEB9EF27B4.d.7D8FB1C157958C12BF4A99EC21626ACB.e.103")&gt; | &lt;selenium.webd...</msg>
+<var>@{listeMUG}</var>
+<arg>xpath=//*[@id="js-product-list"]/div[1]/div/article/div/div[2]/h2/a</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-08T12:08:44.794580" elapsed="0.010013"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-08T12:08:44.814455" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="94a7875808b9095705186c94aec8662c", element="f.9404537B0B1D9576F05B0AEEB9EF27B4.d.7D8FB1C157958C12BF4A99EC21626ACB.e.103")&gt;' contains text 'mug'.</msg>
+<arg>${elt}</arg>
+<arg>${item}</arg>
+<arg>ignore_case=True</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-03-08T12:08:44.805346" elapsed="0.009325"/>
+</kw>
+<var name="${elt}">&lt;selenium.webdriver.remote.webelement.WebElement (session="94a7875808b9095705186c94aec8662c", element="f.9404537B0B1D9576F05B0AEEB9EF27B4.d.7D8FB1C157958C12BF4A99EC21626ACB.e.103")&gt;</var>
+<status status="PASS" start="2024-03-08T12:08:44.805163" elapsed="0.009654"/>
+</iter>
+<iter>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-08T12:08:44.825039" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="94a7875808b9095705186c94aec8662c", element="f.9404537B0B1D9576F05B0AEEB9EF27B4.d.7D8FB1C157958C12BF4A99EC21626ACB.e.104")&gt;' contains text 'mug'.</msg>
+<arg>${elt}</arg>
+<arg>${item}</arg>
+<arg>ignore_case=True</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-03-08T12:08:44.815232" elapsed="0.010143"/>
+</kw>
+<var name="${elt}">&lt;selenium.webdriver.remote.webelement.WebElement (session="94a7875808b9095705186c94aec8662c", element="f.9404537B0B1D9576F05B0AEEB9EF27B4.d.7D8FB1C157958C12BF4A99EC21626ACB.e.104")&gt;</var>
+<status status="PASS" start="2024-03-08T12:08:44.814977" elapsed="0.010706"/>
+</iter>
+<iter>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-08T12:08:44.836971" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="94a7875808b9095705186c94aec8662c", element="f.9404537B0B1D9576F05B0AEEB9EF27B4.d.7D8FB1C157958C12BF4A99EC21626ACB.e.105")&gt;' contains text 'mug'.</msg>
+<arg>${elt}</arg>
+<arg>${item}</arg>
+<arg>ignore_case=True</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-03-08T12:08:44.827021" elapsed="0.010254"/>
+</kw>
+<var name="${elt}">&lt;selenium.webdriver.remote.webelement.WebElement (session="94a7875808b9095705186c94aec8662c", element="f.9404537B0B1D9576F05B0AEEB9EF27B4.d.7D8FB1C157958C12BF4A99EC21626ACB.e.105")&gt;</var>
+<status status="PASS" start="2024-03-08T12:08:44.826006" elapsed="0.011538"/>
+</iter>
+<iter>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-08T12:08:44.846982" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="94a7875808b9095705186c94aec8662c", element="f.9404537B0B1D9576F05B0AEEB9EF27B4.d.7D8FB1C157958C12BF4A99EC21626ACB.e.106")&gt;' contains text 'mug'.</msg>
+<arg>${elt}</arg>
+<arg>${item}</arg>
+<arg>ignore_case=True</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-03-08T12:08:44.838222" elapsed="0.008978"/>
+</kw>
+<var name="${elt}">&lt;selenium.webdriver.remote.webelement.WebElement (session="94a7875808b9095705186c94aec8662c", element="f.9404537B0B1D9576F05B0AEEB9EF27B4.d.7D8FB1C157958C12BF4A99EC21626ACB.e.106")&gt;</var>
+<status status="PASS" start="2024-03-08T12:08:44.837798" elapsed="0.009557"/>
+</iter>
+<iter>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-08T12:08:44.857013" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="94a7875808b9095705186c94aec8662c", element="f.9404537B0B1D9576F05B0AEEB9EF27B4.d.7D8FB1C157958C12BF4A99EC21626ACB.e.107")&gt;' contains text 'mug'.</msg>
+<arg>${elt}</arg>
+<arg>${item}</arg>
+<arg>ignore_case=True</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-03-08T12:08:44.847930" elapsed="0.009300"/>
+</kw>
+<var name="${elt}">&lt;selenium.webdriver.remote.webelement.WebElement (session="94a7875808b9095705186c94aec8662c", element="f.9404537B0B1D9576F05B0AEEB9EF27B4.d.7D8FB1C157958C12BF4A99EC21626ACB.e.107")&gt;</var>
+<status status="PASS" start="2024-03-08T12:08:44.847527" elapsed="0.009849"/>
+</iter>
+<var>${elt}</var>
+<value>@{listeMUG}</value>
+<status status="PASS" start="2024-03-08T12:08:44.804764" elapsed="0.052676"/>
+</for>
+<arg>${message}</arg>
+<arg>${item}</arg>
+<status status="PASS" start="2024-03-08T12:08:44.764435" elapsed="0.093462"/>
+</kw>
+<arg>mug</arg>
+<arg>Il y a 5 produits.</arg>
+<status status="PASS" start="2024-03-08T12:08:38.090019" elapsed="6.768041"/>
+</kw>
+<kw name="Rechercher et verifier">
+<kw name="Rechercher">
+<kw name="Ouvrir Prestashop">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-08T12:08:44.861213" level="INFO">Opening browser 'Chrome' to base url 'http://www.qualifiez.fr/monPrestashop2/prestashop/index.php'.</msg>
+<arg>http://www.qualifiez.fr/monPrestashop2/prestashop/index.php</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-08T12:08:44.860738" elapsed="4.272261"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-08T12:08:49.150490" level="INFO">Page title is 'monPrestashop'.</msg>
+<arg>monPrestashop</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-03-08T12:08:49.134232" elapsed="0.016723"/>
+</kw>
+<status status="PASS" start="2024-03-08T12:08:44.860237" elapsed="4.291063"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-08T12:08:49.151563" elapsed="0.384718"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-08T12:08:49.540512" level="INFO">Typing text 'T-shirt' into text field 'xpath=//*[@id="search_widget"]/form/input[2]'.</msg>
+<arg>xpath=//*[@id="search_widget"]/form/input[2]</arg>
+<arg>${item}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-08T12:08:49.539608" elapsed="0.786616"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-08T12:08:50.331761" level="INFO">Sending key(s) ('RETURN',) to xpath=//*[@id="search_widget"]/form/input[2] element.</msg>
+<msg time="2024-03-08T12:08:50.799477" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2024-03-08T12:08:50.800161" level="INFO">Releasing special key RETURN.</msg>
+<arg>xpath=//*[@id="search_widget"]/form/input[2]</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-08T12:08:50.328978" elapsed="2.996483"/>
+</kw>
+<arg>${item}</arg>
+<status status="PASS" start="2024-03-08T12:08:44.859334" elapsed="8.467647"/>
+</kw>
+<kw name="Verifier">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-08T12:08:53.328376" level="INFO">Verifying element 'xpath=//*[@id="js-product-list-top"]/div[1]/p' contains exact text 'Il y a 1 produit.'.</msg>
+<arg>xpath=//*[@id="js-product-list-top"]/div[1]/p</arg>
+<arg>${message}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-03-08T12:08:53.328035" elapsed="0.076670"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-08T12:08:53.420026" level="INFO">@{listeMUG} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="604e4b3e55a0c897aaaff6f309179cf0", element="f.38F32C73F1CBEFD28C5F285BB88733A5.d.AC1A241B36513D9E41CBA6A01F1A0DCC.e.91")&gt; ]</msg>
+<var>@{listeMUG}</var>
+<arg>xpath=//*[@id="js-product-list"]/div[1]/div/article/div/div[2]/h2/a</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-08T12:08:53.405025" elapsed="0.015205"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-08T12:08:53.440484" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="604e4b3e55a0c897aaaff6f309179cf0", element="f.38F32C73F1CBEFD28C5F285BB88733A5.d.AC1A241B36513D9E41CBA6A01F1A0DCC.e.91")&gt;' contains text 'T-shirt'.</msg>
+<arg>${elt}</arg>
+<arg>${item}</arg>
+<arg>ignore_case=True</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-03-08T12:08:53.421232" elapsed="0.019509"/>
+</kw>
+<var name="${elt}">&lt;selenium.webdriver.remote.webelement.WebElement (session="604e4b3e55a0c897aaaff6f309179cf0", element="f.38F32C73F1CBEFD28C5F285BB88733A5.d.AC1A241B36513D9E41CBA6A01F1A0DCC.e.91")&gt;</var>
+<status status="PASS" start="2024-03-08T12:08:53.420972" elapsed="0.019954"/>
+</iter>
+<var>${elt}</var>
+<value>@{listeMUG}</value>
+<status status="PASS" start="2024-03-08T12:08:53.420443" elapsed="0.020567"/>
+</for>
+<arg>${message}</arg>
+<arg>${item}</arg>
+<status status="PASS" start="2024-03-08T12:08:53.327293" elapsed="0.113840"/>
+</kw>
+<arg>T-shirt</arg>
+<arg>Il y a 1 produit.</arg>
+<status status="PASS" start="2024-03-08T12:08:44.858539" elapsed="8.582710"/>
+</kw>
+<kw name="Fermer Prestashop" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-08T12:08:53.445818" elapsed="0.094872"/>
+</kw>
+<status status="PASS" start="2024-03-08T12:08:53.443607" elapsed="0.097620"/>
+</kw>
+<status status="PASS" start="2024-03-08T12:08:38.088734" elapsed="15.453528"/>
+</test>
+<status status="PASS" start="2024-03-08T12:08:37.970989" elapsed="15.573652"/>
+</suite>
+<status status="PASS" start="2024-03-08T12:08:37.969129" elapsed="15.576976"/>
+</suite>
+<status status="PASS" start="2024-03-08T12:08:37.949427" elapsed="15.600160"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="IN210">IN210</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Tp6">IN210.Tp6</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Tp2024">IN210.Tp6.Tp2024</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
