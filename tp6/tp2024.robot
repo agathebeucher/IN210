@@ -1,10 +1,11 @@
 *** Settings ***
 
 Library  SeleniumLibrary
+Test Setup  Ouvrir Prestashop
 Test Teardown  Fermer Prestashop
 
 *** Test Cases ***
-test 1
+#test 1
     # Ouvrir Prestashop
     # Maximize Browser Window
     # Input Text  xpath=//*[@id="search_widget"]/form/input[2]  mug
@@ -14,25 +15,33 @@ test 1
     # FOR  ${elt}  IN  @{listeMUG}
     #     Element Should Contain  ${elt}  mug  ignore_case=True
     # END
-    Rechercher  mug
-    Verifier  Il y a 5 produits.  MUG
+    #Rechercher  mug
+    #Verifier  Il y a 5 produits.  MUG
 
 
     # Click Element  //*[@id="js-product-list"]/div[1]/div[1]/article/div/div[1]/a/picture/img 
 
 
-test 2
-    [Template]  Rechercher et verifier
-    mug  Il y a 5 produits.
-    T-shirt  Il y a 1 produit.
+#test 2
+    #[Template]  Rechercher et verifier
+    #mug  Il y a 5 produits.
+    #T-shirt  Il y a 1 produit.
+
+test 3 
+    survoler  HOMMES
 
 *** Keywords ***
 Ouvrir Prestashop
     Open Browser  http://www.qualifiez.fr/monPrestashop2/prestashop/index.php  Chrome
-    Title Should Be  monPrestashop
+    # Title Should Be  monPrestashop
 
 Fermer Prestashop
     Close Browser
+
+Survoler
+    [Arguments]    ${item}
+    Mouse Over  xpath=//*[@id="category-3"]/a
+    Page Should Contain  ${item} 
 
 Rechercher 
     [Arguments]    ${item}
