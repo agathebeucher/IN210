@@ -9,12 +9,14 @@ Le comportement par défaut est que le test s'arrête dès que l'échec se produ
 
 ## Question 3 :  Quel locator aller vous choisir relatif ou absolu ? Pourquoi ?
 On choisit un locator relatif pour les raisons suivantes : 
-- RESISTANTS : Les locators relatifs sont moins susceptibles d'être affectés par des modifications dans la structure globale de la page HTML. Si la page est mise à jour et que l'élément que l'on souhaite cibler reste le même mais que son emplacement dans la hiérarchie de la page change, un locator relatif a plus de chances de continuer à fonctionner sans modification. Au contraire, les locators absolus sont plus sensibles aux changements dans la structure de la page, la moindre modification de la hiérarchie HTML peut rendre le locator erroné
-- LISIBILITE : Les locators relatifs sont en général plus courts et plus lisibles (permet la maintenance des tests)
-- RAPIDITE : les locators relatifs sont plus court et donc plus rapides à évaluer par le navigateur, car ils spécifient moins de niveaux à parcourir
-
+- **RESISTANTS** : Les locators relatifs sont moins susceptibles d'être affectés par des modifications dans la structure globale de la page HTML. Si la page est mise à jour et que l'élément que l'on souhaite cibler reste le même mais que son emplacement dans la hiérarchie de la page change, un locator relatif a plus de chances de continuer à fonctionner sans modification. Au contraire, les locators absolus sont plus sensibles aux changements dans la structure de la page, la moindre modification de la hiérarchie HTML peut rendre le locator erroné
+- **LISIBILITE** : Les locators relatifs sont en général plus courts et plus lisibles (permet la maintenance des tests)
+- **RAPIDITE** : les locators relatifs sont plus court et donc plus rapides à évaluer par le navigateur, car ils spécifient moins de niveaux à parcourir
 
 ## Question 4 : Quel est l’intérêt de ces mots-clefs ?
+La création de mots-clés personnalisés pour les actions et les contrôles dans Robot Framework apporte plusieurs avantages significatifs : 
+- **Réutilisable et Maintenable** : En encapsulant des actions ou des vérifications fréquemment utilisées dans des mots-clés personnalisés, on peut éviter la duplication de coden ce qui rend les scripts de test plus courts et plus faciles à comprendre et à maintenir
+- **Lisibilité** : Les mots-clés personnalisés peuvent être renommés de manière plus précies pour refléter l'action ou le contrôle qu'ils effectuent, ce qui rend les scripts de test beaucoup plus lisibles et compréhensibles
 
 ## Question 5 : Quelle approche de test utilise-t-on :
 - Record-Replay
