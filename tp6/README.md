@@ -1,6 +1,6 @@
 # testIHM
 ## Question 1 : quel est l’intérêt du Test Setup et du testdown ?
-Le ***"Test Setup"*** est une série d'actions exécutées avant chaque cas de test dans une suite de tests. Le but du Test Setup est de préparer l'environnement de test afin qu'il soit dans un état déterminé avant l'exécution de chaque cas de test, dans notre cas, avec un navigateur déjà démarré. 
+Le ***"Test Setup"*** est une série d'actions exécutées avant chaque cas de test dans une suite de tests. Le but du Test Setup est de préparer l'environnement de test afin qu'il soit dans un état déterminé avant l'exécution de chaque cas de test, dans notre cas, avec un navigateur déjà démarré. \\
 De même, le ***"Test Teardown"*** est une série d'actions exécutées après chaque cas de test dans un fichier de test ou une suite de tests. Le but du Test Teardown est de nettoyer ou de remettre l'environnement de test dans un état neutre après l'exécution de chaque cas de test, avec par exemple la suppression de données de test, la fermeture de connexions à des services comme au navigateur web ici.
 En particulier, utiliser un Test Teardown assure que les tests sont isolés les uns des autres, réduisant ainsi le risque que l'état d'un test affecte l'exécution d'un autre test, ce qui améliore la fiabilité et la reproductibilité des tests. 
 
