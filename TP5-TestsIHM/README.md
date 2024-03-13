@@ -1,8 +1,8 @@
 # testIHM
 ## Question 1 : quel est l’intérêt du Test Setup et du testdown ?
-Le ***"Test Setup"*** est une série d'actions exécutées avant chaque cas de test dans une suite de tests. Le but du Test Setup est de préparer l'environnement de test afin qu'il soit dans un état déterminé avant l'exécution de chaque cas de test, dans notre cas, avec un navigateur déjà démarré.
-De même, le ***"Test Teardown"*** est une série d'actions exécutées après chaque cas de test dans un fichier de test ou une suite de tests. Le but du Test Teardown est de nettoyer ou de remettre l'environnement de test dans un état neutre après l'exécution de chaque cas de test, avec par exemple la suppression de données de test, la fermeture de connexions à des services comme au navigateur web ici.
-En particulier, utiliser un Test Teardown assure que les tests sont isolés les uns des autres, réduisant ainsi le risque que l'état d'un test affecte l'exécution d'un autre test, ce qui améliore la fiabilité et la reproductibilité des tests. 
+Le ***"Test Setup"***  fait référence à des d'actions qui s'éxecutent *avant* chaque cas de test, qui permet donc de préparer l'environnement de test pour qu'il soit dans un état voulu (dans nôtre cas avec le Browser ouvert) avant l'exécution de chaque test.
+De même, le ***"Test Teardown"*** fait référence à des d'actions qui s'éxecutent *après* chaque test dans un fichier de test, dont le but est de nettoyer ou de rénitialiser l'environnement après l'exécution de chaque test, avec par exemple la suppression de données de test ou la fermeture de connexions à des services comme au navigateur web ici.
+En particulier, il permet d'assurer que les tests sont isolés les uns des autres, ce qui pourrait réduire le risque que l'éxecution d'un test non fermé affecte l'exécution d'un autre test. Il améliore la fiabilité et la reproductibilité des tests. 
 
 ## Question 2 : si on met le close browser à la fin du test et qu’une des commandes précédentes échouent que se passe-t-il ?
 Le comportement par défaut est que le test s'arrête dès que l'échec se produit. Cela signifie que toutes les commandes qui devaient être exécutées après l'échec, y compris Close Browser, ne seront pas exécutées, donc le navigateur reste ouvert.
