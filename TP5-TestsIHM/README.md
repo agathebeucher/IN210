@@ -19,7 +19,7 @@ La création de mots-clés personnalisés dans Robot Framework a plusieurs avant
 - **Lisibilité** : Les mots-clés personnalisés peuvent être renommés de manière plus précies pour refléter l'action ou le contrôle qu'ils effectuent, ce qui rend les scripts de test beaucoup plus lisibles et compréhensibles
 
 ## Question 5 : Quelle approche de test utilise-t-on :
-Dans notre cas on crée un template pour une approche **data-driven**, les cas de test sont exécutés en utilisant un ensemble de données d'entrée qui sont séparées de la logique de test elle-même, soit lez même ensemble d'actions de test est répété plusieurs fois avec différents ensembles de données. Cette approche est particulièrement utile pour tester la même fonctionnalité sous différents scénarios en modifiant simplement les données d'entrée, sans avoir besoin de réécrire ou de dupliquer la logique de test.
+Dans notre cas on crée un template pour une approche **Keyword**, les cas de test sont exécutés en définissant des mots clés qui représentent une suite d'action basique. Cett approche permtet l'ajout de nouveaux tests peu couteux (mais un scirpt de base plus couteux, une fois le script de contrôle écrit + mots clés) compréhensible par tous et facile à maintenir.
 
  
 
