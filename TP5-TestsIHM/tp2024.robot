@@ -41,7 +41,7 @@ Fermer Prestashop
 Survoler
     [Arguments]    ${item}
     Mouse Over  xpath=//*[@id="category-3"]/a
-    Page Should Contain  ${item} 
+    Element Should Be Visible  ${item} 
 
 Rechercher 
     [Arguments]    ${item}
